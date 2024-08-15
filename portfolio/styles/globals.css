@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-poppins; /* Apply the Poppins font to the body */
+}
+
+.accent
+{
+  accent-color:#FD6F00; 
+}
