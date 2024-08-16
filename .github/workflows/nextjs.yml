@@ -33,12 +33,10 @@ jobs:
           echo "manager=yarn" >> $GITHUB_ENV
           echo "command=install" >> $GITHUB_ENV
           echo "runner=yarn" >> $GITHUB_ENV
-          exit 0
         elif [ -f "package.json" ]; then
           echo "manager=npm" >> $GITHUB_ENV
           echo "command=ci" >> $GITHUB_ENV
           echo "runner=npx --no-install" >> $GITHUB_ENV
-          exit 0
         else
           echo "Unable to determine package manager"
           exit 1
@@ -71,5 +69,4 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v4
       with:
-        # Ensure the correct path to your exported static site
         path: ./out
